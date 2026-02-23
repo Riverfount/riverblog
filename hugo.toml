@@ -3,7 +3,8 @@ languageCode = "pt-br"
 title = "Blog do Riverfount"
 theme = "PaperMod"
 enableRobotsTXT = true
-paginate = 10
+[pagination]
+  pagerSize = 10
 
 defaultContentLanguage = "pt-br"
 
