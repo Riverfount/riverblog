@@ -7,23 +7,36 @@
     border-radius: 50%;
 }
 
-/* Largura máxima do conteúdo principal */
+/* Largura máxima do conteúdo principal
+   clamp(min, preferido, max): cresce com a tela mas nunca passa de 900px */
 .main {
-  max-width: 50% /* 1000px;   padrão do PaperMod é 768px */
+    max-width: clamp(320px, 90vw, 900px);
 }
 
 /* Largura dos posts e páginas */
 .post-content {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /* Blocos de código com scroll horizontal em telas menores */
 .post-content pre {
-  max-width: 100%;
-  overflow-x: auto;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
-/* Fonte levemente maior no código
-.post-content code {
-  font-size: 0.95em;
-} */
+/* Títulos do post responsivos */
+.post-title {
+    font-size: clamp(24px, 5vw, 40px);
+}
+
+.post-content h1 { font-size: clamp(22px, 4.5vw, 40px); }
+.post-content h2 { font-size: clamp(20px, 4vw, 32px); }
+.post-content h3 { font-size: clamp(18px, 3.5vw, 24px); }
+
+/* Foto de perfil menor em mobile */
+@media screen and (max-width: 480px) {
+    .profile_inner img {
+        width: 160px;
+        height: 160px;
+    }
+}
