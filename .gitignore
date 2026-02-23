@@ -1,3 +1,6 @@
+# Override global gitignore
+!Makefile
+
 # Hugo build output
 public/
 resources/_gen/
