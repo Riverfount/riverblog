@@ -1,6 +1,6 @@
 +++
 date = '2025-12-04'
-draft = true
+draft = false
 title = 'Generators em Python: Técnicas Essenciais para Código Eficiente e Robusto'
 +++
 Generators em Python são funções especiais que usam `yield` para gerar valores sob demanda, economizando memória em vez

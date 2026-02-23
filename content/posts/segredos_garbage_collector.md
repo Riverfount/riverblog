@@ -1,6 +1,6 @@
 +++
 date = '2025-12-03'
-draft = true
+draft = false
 title = 'Desvende o Segredo do Garbage Collector do Python: Evite Vazamentos e Otimize Sua Memória Agora!'
 +++
 Você já parou para pensar por que seu código Python consome cada vez mais memória em aplicações de longa duração, mesmo sem vazamentos óbvios? Palavras-chave como "garbage collector Python", "contagem de referências Python", "ciclos de referência Python" e "otimização de memória CPython" dominam buscas de desenvolvedores que enfrentam pausas inesperadas, inchaço de heap ou serviços que "incham" ao longo do tempo. Neste guia técnico expandido e atualizado, um engenheiro especialista em Python mergulha nos mecanismos internos do GC do CPython – com exemplos práticos de código, benchmarks reais e dicas avançadas de tuning – para você dominar a gestão de memória, detectar vazamentos sutis, configurar gerações otimizadas e escalar aplicações de produção sem surpresas.

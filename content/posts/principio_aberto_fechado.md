@@ -1,6 +1,6 @@
 +++
 date = '2025-11-10'
-draft = true
+draft = false
 title = 'Como o Princípio Aberto-Fechado Pode Transformar Seu Código Python'
 +++
 O Princípio Aberto-Fechado (Open-Closed Principle), um dos pilares do SOLID, é essencial para quem busca escrever código Python orientado a objetos mais flexível, escalável e de fácil manutenção. Ele estabelece que entidades de software — como classes, módulos e funções — devem estar abertas para extensão, mas fechadas para modificação.  

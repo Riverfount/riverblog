@@ -1,6 +1,6 @@
 +++
 date = '2025-11-27'
-draft = true
+draft = false
 title = 'Descubra o UV: Gerenciador de Projetos Python para Iniciantes'
 +++
 O UV é um gerenciador de pacotes e projetos Python extremamente rápido, escrito em Rust, que substitui ferramentas como `pip`, `venv` e `pipenv` por comandos simples e automação de ambientes virtuais. Ele conecta gerenciamento de versões do Python, instalação de dependências e execução de scripts em um único comando, proporcionando agilidade no desenvolvimento.​

@@ -1,6 +1,6 @@
 +++
 date = '2025-11-19'
-draft = true
+draft = false
 title = 'Desvendando a Armadilha dos Argumentos Mutáveis como Default em Python'
 +++
 Você já enfrentou resultados inesperados ao usar listas ou dicionários como valores padrão em funções Python? Esse é um problema comum que pode causar bugs sutis e difíceis de encontrar. Neste artigo técnico, vamos desmistificar o motivo desse comportamento, mostrando exemplos práticos e como evitá-lo com boas práticas de programação. Se você é um desenvolvedor Python buscando produzir código mais robusto e previsível, este conteúdo é essencial para o seu dia a dia.

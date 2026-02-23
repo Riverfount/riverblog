@@ -1,6 +1,6 @@
 +++
 date = '2025-11-12'
-draft = true
+draft = false
 title = 'Segregação de Interfaces em Python: projetando contratos enxutos com ABC e Protocol'
 +++
 O Princípio da Segregação de Interfaces (ISP — Interface Segregation Principle) é um dos pilares do SOLID e trata diretamente da qualidade dos contratos entre componentes. Em essência, ele afirma que uma classe não deve ser obrigada a depender de métodos que não utiliza. Essa regra incentiva o desenho de interfaces menores, mais coesas e representativas de um papel específico no sistema.

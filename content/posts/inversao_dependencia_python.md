@@ -1,6 +1,6 @@
 +++
 date = '2025-11-14'
-draft = true
+draft = false
 title = 'Como aplicar o Princípio da Inversão de Dependência em Python: um guia prático para sistemas flexíveis'
 +++
 **Resumo:**  

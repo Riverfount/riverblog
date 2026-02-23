@@ -1,6 +1,6 @@
 +++
 date = '2025-11-18'
-draft = true
+draft = false
 title = '`from módulo import *` em Python: por que você nunca deveria usar essa prática'
 +++
 Entenda os riscos do uso de `from módulo import *` em Python, saiba por que ele compromete a legibilidade e a manutenção do código e descubra as alternativas recomendadas por desenvolvedores experientes.

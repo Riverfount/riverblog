@@ -1,6 +1,6 @@
 +++
 date = '2025-11-06'
-draft = true
+draft = false
 title = 'Como usar Type Hints em Callables no Python para aumentar a qualidade do seu código'
 +++
 Os Type Hints transformaram a forma como escrevemos e mantemos código Python. Desde que foram introduzidos oficialmente no Python 3.5+, eles se tornaram essenciais em projetos que buscam clareza, segurança e manutenção mais fácil.

@@ -1,6 +1,6 @@
 +++
 date = '2026-01-13'
-draft = true
+draft = false
 title = 'Nomear Para Comunicar: Como Escrever Variáveis Claras Concisas e Inteligentes em Python'
 +++
 Saber dar bons nomes é uma das habilidades mais valiosas — e menos ensinadas — na engenharia de software. Em Python,

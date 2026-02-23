@@ -1,6 +1,6 @@
 +++
 date = '2025-11-04'
-draft = true
+draft = false
 title = 'O que é uma API REST? Segunda parte ...'
 +++
 Dando continuidade ao artigo **"O que é uma API REST? Explicação Detalhada para Desenvolvedores"**, esta segunda parte aprofunda-se em um método HTTP essencial que não foi coberto anteriormente: o **PATCH**, destacando seu papel na atualização parcial de recursos. Enquanto no artigo inicial exploramos os métodos GET, POST, PUT e DELETE para operações completas de criação, leitura, atualização e exclusão, aqui explicamos como o PATCH permite modificações mais precisas e eficientes, sem a necessidade de substituir o recurso inteiro.

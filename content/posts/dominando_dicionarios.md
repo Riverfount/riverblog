@@ -1,6 +1,6 @@
 +++
 date = '2025-12-09'
-draft = true
+draft = false
 title = 'Dominando Dicionários em Python: O Segredo O(1) para DSA Eficiente!'
 +++
 Procurando por **dicionários Python DSA**, **hash tables em Python**, **complexidade Big O dict Python** ou **estruturas de dados Python avançadas**? Neste guia técnico desvendamos os princípios internos dos dicionários (`dict`), desde hashing e colisões até operações otimizadas para algoritmos reais. Ideal para engenheiros de software que buscam performance em microservices, grafos e entrevistas técnicas – leia e eleve seu código Python a outro nível!

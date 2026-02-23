@@ -1,6 +1,6 @@
 +++
 date = '2025-11-24'
-draft = true
+draft = false
 title = 'Usando Abstract Base Classes (ABC) em Projetos Reais de Python: Um Exemplo Prático com Microserviços'
 +++
 Este artigo mostra como aplicar Abstract Base Classes (ABC) em um projeto real robusto, focado no desenvolvimento de microserviços. O objetivo é garantir clareza, contratos explícitos e extensibilidade, aliando os conceitos a práticas modernas.

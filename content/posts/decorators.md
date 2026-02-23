@@ -1,6 +1,6 @@
 +++
 date = '2026-02-19T11:29:23-03:00'
-draft = true
+draft = false
 title = 'Decorators Internamente: Como Funcionam e Como Criar os Seus'
 +++
 Se você escreve Python há algum tempo, já usou decorators sem perceber. O `@app.route` do Flask, o
