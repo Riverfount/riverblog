@@ -1,0 +1,20 @@
+/* Largura máxima do conteúdo principal */
+.main {
+  max-width: 50% /* 1000px;   padrão do PaperMod é 768px */
+}
+
+/* Largura dos posts e páginas */
+.post-content {
+  max-width: 100%;
+}
+
+/* Blocos de código com scroll horizontal em telas menores */
+.post-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Fonte levemente maior no código
+.post-content code {
+  font-size: 0.95em;
+} */

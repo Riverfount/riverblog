@@ -1,0 +1,67 @@
+name: Build & Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  HUGO_VERSION: "0.148.2"
+  PUBLISH_DIR: "./public"
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # necessário para o tema PaperMod
+          fetch-depth: 0         # necessário para lastmod nos posts
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3  # atualizado de v2 para v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Build site
+        run: make build  # certifique-se que o Makefile existe com target build
+        env:
+          HUGO_ENVIRONMENT: production
+
+      - name: Copy CNAME
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME ${{ env.PUBLISH_DIR }}/
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.PUBLISH_DIR }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

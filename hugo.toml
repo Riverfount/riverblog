@@ -1,0 +1,98 @@
+baseURL = "https://riverfount.dev.br"
+languageCode = "pt-br"
+title = "Blog do Riverfount"
+theme = "PaperMod"
+enableRobotsTXT = true
+paginate = 10
+
+defaultContentLanguage = "pt-br"
+
+[languages]
+  [languages."pt-br"]
+    languageCode = "pt-BR"
+    languageName = "Português"
+    weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts"
+  weight = 10
+
+[[menu.main]]
+  name = "Sobre"
+  url = "/about"
+  weight = 20
+
+[[menu.main]]
+  name = "Buscar"
+  url = "/search"
+  weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    noClasses = false
+    lineNos = true
+    lineNumbersInTable = true
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+  env = "production"
+  author = "Riverfount"
+  description = "Blog sobre Python, open source e desenvolvimento de software"
+  defaultTheme = "dark"
+  disableThemeToggle = false
+
+  profileMode.enabled = true
+  profileMode.title = "Riverfount"
+  profileMode.subtitle = "Desenvolvedor Python & entusiasta de open source"
+  profileMode.imageUrl = "img/FotoRiverAbout.png"
+  profileMode.imageTitle = "Minha foto"
+  profileMode.imageWidth = 240
+  profileMode.imageHeight = 240
+
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowToc = true
+  TocOpen = false
+  ShowWordCount = true
+  ShowShareButtons = true
+  ShowFullTextinRSS = false
+
+  fuseOpts.shouldSort = true
+  fuseOpts.minMatchCharLength = 2
+  fuseOpts.threshold = 0.4
+
+  cover.linkFullImages = true
+  cover.responsiveImages = true
+
+  assets.customSCSSFile = false  # garante que vai usar CSS puro
+
+  # Adicione esta linha:
+  customCSS = ["css/extended/custom.css"]
+
+  [[params.socialIcons]]
+    name = "mastodon"
+    url = "https://bolha.us/@riverfount"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Riverfount"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/riverfount"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:vicente.marcal@gmail.com"

@@ -1,0 +1,23 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# Hugo lock file
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.*
+
+# Claude Code
+.claude/
