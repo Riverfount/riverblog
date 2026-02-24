@@ -2,6 +2,7 @@
 date = '2026-02-24T08:05:23-03:00'
 draft = false
 title = 'Injeção de Dependência em Python sem Frameworks'
+tags = ["design-patterns", "arquitetura", "solid", "testes"]
 +++
 Existe uma sequência bastante comum em projetos Python: você escreve uma classe, ela funciona bem, aí chega a hora de testar — e percebe que não dá para testar sem subir um banco de dados, sem fazer uma chamada HTTP real, sem criar um arquivo em disco. O código *funciona*, mas ele não é *testável*. E não testável, na prática, significa frágil.
 

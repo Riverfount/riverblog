@@ -52,6 +52,7 @@
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
+    {{- partial "related_posts.html" . }}
   </footer>
 
   {{- if (.Param "comments") }}

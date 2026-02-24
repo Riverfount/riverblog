@@ -2,6 +2,7 @@
 date = '2025-11-17'
 draft = false
 title = 'Comparações com True em Python: erros comuns e práticas recomendadas para engenheiros'
+tags = ["python", "boas-práticas", "clean-code"]
 +++
 No desenvolvimento Python, especialmente em projetos de médio a grande porte e pipelines complexos de testes automatizados, é comum encontrar erros sutis relacionados a comparações com o valor booleano `True`. Uma prática aparentemente inofensiva, como usar `== True` para verificar condições, pode introduzir comportamentos inesperados que dificultam a manutenção, geram falsos positivos em testes e causam dúvidas em revisões de código.
 

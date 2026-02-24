@@ -2,6 +2,7 @@
 date = '2025-12-01'
 draft = false
 title = 'Arquitetura Hexagonal em Python: Isolando o Domínio para Aplicações Robustas e Escaláveis'
+tags = ["arquitetura", "design-patterns", "clean-code"]
 +++
 A arquitetura hexagonal, ou **Ports and Adapters**, coloca a lógica de negócio no centro de um hexágono simbólico, cercada por portas (interfaces abstratas) que conectam adaptadores externos como bancos de dados, APIs web, filas ou serviços de terceiros. Proposta por Alistair Cockburn em 2005, ela inverte as dependências tradicionais: o domínio não conhece frameworks ou persistência, mas estes dependem dele via injeção de dependências, promovendo código limpo e adaptável em Python. Essa abordagem alinha-se perfeitamente à filosofia "simples é melhor" do Python, mas com rigor para domínios complexos.
 

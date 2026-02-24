@@ -45,6 +45,20 @@ defaultContentLanguage = "pt-br"
   [markup.goldmark.renderer]
     unsafe = true
 
+[related]
+  includeNewer = false
+  threshold = 20
+  toLower = true
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+    pattern = "2006"
+
 [params]
   env = "production"
   author = "Riverfount"

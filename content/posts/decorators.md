@@ -2,6 +2,7 @@
 date = '2026-02-19T11:29:23-03:00'
 draft = false
 title = 'Decorators Internamente: Como Funcionam e Como Criar os Seus'
+tags = ["python", "decoradores", "design-patterns"]
 +++
 Se você escreve Python há algum tempo, já usou decorators sem perceber. O `@app.route` do Flask, o
 `@pytest.mark.parametrize`, o `@dataclass` da stdlib, o `@property` nativo da linguagem — todos são decorators. Eles

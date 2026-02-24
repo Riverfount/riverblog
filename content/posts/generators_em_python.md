@@ -2,6 +2,7 @@
 date = '2025-12-04'
 draft = false
 title = 'Generators em Python: Técnicas Essenciais para Código Eficiente e Robusto'
+tags = ["python", "geradores", "performance"]
 +++
 Generators em Python são funções especiais que usam `yield` para gerar valores sob demanda, economizando memória em vez
 de criar listas completas na RAM. Pense neles como "listas preguiçosas" que produzem um item por vez, ideais para

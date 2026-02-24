@@ -2,6 +2,7 @@
 date = '2025-12-02'
 draft = false
 title = 'Primitive Obsession no Python: Refatorando com Dataclasses para Value Objects Robustos'
+tags = ["design-patterns", "tipagem", "clean-code"]
 +++
 Baseado na Live de Python #150 do canal [Eduardo Mendes no YouTube](https://www.youtube.com/watch?v=NtZY3AmsBSk&pp=ygUfZWR1YXJkbyBtZW5kZXMgdGlwb3MgcHJpbWl0aXZvcw%3D%3D), este artigo explora de maneira prática e direta a "primitive obsession" — code smell onde tipos primitivos (strings, dicts, lists) substituem abstrações de domínio ricas — e como dataclasses (Python 3.7+, [PEP 557](https://peps.python.org/pep-0557/)) oferecem solução definitiva para criar Value Objects tipados, imutáveis e comportamentalmente ricos. Para sêniores buscando elevar modelagem DDD e reduzir technical debt em escala. 
 

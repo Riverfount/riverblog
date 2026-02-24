@@ -2,6 +2,7 @@
 date = '2026-01-13'
 draft = false
 title = 'Nomear Para Comunicar: Como Escrever Variáveis Claras Concisas e Inteligentes em Python'
+tags = ["python", "clean-code", "boas-práticas"]
 +++
 Saber dar bons nomes é uma das habilidades mais valiosas — e menos ensinadas — na engenharia de software. Em Python,
 nomes de variáveis e funções bem escolhidos tornam o código legível, reduzem ambiguidade e ajudam a preservar o design

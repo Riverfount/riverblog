@@ -2,6 +2,7 @@
 date = '2025-11-11'
 draft = false
 title = 'Liskov, Duck Typing e Protocolos: Como Python Transforma o Princípio de Substituição'
+tags = ["solid", "tipagem", "design-patterns"]
 +++
 No mundo da programação orientada a objetos, o Princípio de Substituição de Liskov (LSP) é um guia essencial para criar sistemas robustos e flexíveis. Porém, em Python, esse princípio ganha uma nuance especial graças ao **duck typing** e aos **protocolos**, que mudam completamente a forma como pensamos em substituição e hierarquia. 
 

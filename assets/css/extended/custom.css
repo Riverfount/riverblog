@@ -33,6 +33,52 @@
 .post-content h2 { font-size: clamp(20px, 4vw, 32px); }
 .post-content h3 { font-size: clamp(18px, 3.5vw, 24px); }
 
+/* Posts relacionados */
+.related-posts {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.related-posts-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.related-posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.related-posts-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.related-posts-item a {
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.related-posts-item a:hover {
+    text-decoration: underline;
+}
+
+.related-posts-item .post-meta {
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
 /* Foto de perfil menor em mobile */
 @media screen and (max-width: 480px) {
     .profile_inner img {

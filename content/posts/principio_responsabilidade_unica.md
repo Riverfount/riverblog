@@ -2,6 +2,7 @@
 date = '2025-11-09'
 draft = false
 title = 'O Princípio da Responsabilidade Única em Python: menos é mais'
+tags = ["solid", "clean-code", "design-patterns"]
 +++
 Em Python, é comum — especialmente pela flexibilidade da linguagem e pelo foco em produtividade — cairmos na armadilha de escrever grandes blocos de código em uma única função, método ou rota. Às vezes, é tentador resolver “tudo em um só lugar”: validar os dados, consultar o banco, tratar erros e ainda montar a resposta final.
 

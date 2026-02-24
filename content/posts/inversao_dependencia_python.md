@@ -2,6 +2,7 @@
 date = '2025-11-14'
 draft = false
 title = 'Como aplicar o Princípio da Inversão de Dependência em Python: um guia prático para sistemas flexíveis'
+tags = ["solid", "design-patterns", "arquitetura"]
 +++
 **Resumo:**  
 O Princípio da Inversão de Dependência (DIP), parte do conjunto SOLID, é fundamental para criar sistemas sustentáveis, extensíveis e fáceis de testar. Este artigo explora como aplicá-lo em Python usando `typing.Protocol` e injeção de dependência, com foco em arquiteturas limpas e aplicação prática em sistemas corporativos.

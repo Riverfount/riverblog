@@ -2,6 +2,7 @@
 date = '2025-11-03'
 draft = false
 title = 'O que é uma API REST? Explicação Detalhada para Desenvolvedores'
+tags = ["api", "rest", "web", "boas-práticas"]
 +++
 ## Introdução
 

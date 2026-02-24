@@ -2,6 +2,7 @@
 date = '2025-11-21'
 draft = false
 title = 'Protocols, Generics e Typing Avançado em Python: Técnicas para Construir Aplicações Robústas e Manuteníveis'
+tags = ["tipagem", "design-patterns", "python"]
 +++
 Este artigo aborda como usar funcionalidades avançadas de tipagem em Python, como _Protocols_, _Generics_ e técnicas avançadas de _typing_, para criar aplicações escaláveis, flexíveis e de fácil manutenção.
 

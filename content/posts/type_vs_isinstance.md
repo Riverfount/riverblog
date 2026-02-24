@@ -2,6 +2,7 @@
 date = '2025-11-05'
 draft = false
 title = 'Comparando `type()` vs `isinstance()` em Python — e o que o duck typing tem a ver com isso'
+tags = ["python", "tipagem", "boas-práticas"]
 +++
 Você sabe qual é a forma mais Pythonic de verificar tipos em seu código? Se ainda usa `type()` para testar variáveis, talvez esteja limitando o potencial do seu projeto sem perceber. Entender a diferença entre `type()`, `isinstance()` e o conceito de duck typing pode transformar a maneira como você escreve código mais limpo, flexível e verdadeiro ao estilo do Python.
 

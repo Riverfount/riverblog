@@ -2,6 +2,7 @@
 date = '2025-11-28'
 draft = false
 title = 'Scripts Python Autocontidos: Como Rodar Qualquer `.py` com Dependências Embutidas no UV'
+tags = ["python", "ferramentas", "uv"]
 +++
 Você já precisou compartilhar um script Python com colegas e teve que explicar: “Instala o Python 3.12, cria um venv, instala requests e rich, depois roda”? Com o gerenciador UV, isso acabou.
 
