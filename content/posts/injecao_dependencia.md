@@ -72,7 +72,6 @@ class NotificadorDePedido:
         mensagem["From"] = "noreply@empresa.com"
         mensagem["To"] = destinatario
         self.smtp.send_message(mensagem)
-```
 
 É só isso. Não tem mágica. A classe continua fazendo exatamente o mesmo trabalho — mas agora quem chama decide o que passa. Em produção, passa um `smtplib.SMTP` real. Em teste, passa um objeto falso que nem abre conexão.
 
