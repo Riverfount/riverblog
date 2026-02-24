@@ -50,6 +50,14 @@ Injeção de Dependência (DI) é um nome sofisticado para uma ideia simples: **
 
 Quem decide *qual* dependência usar é quem instancia a classe — não a classe em si. Isso inverte o controle: a classe para de controlar a criação e passa a declarar o que precisa.
 
+Vale situar o termo numa hierarquia que aparece bastante em discussões sobre o tema:
+
+- **IoC (Inversão de Controle)** é o princípio mais amplo: quem controla o fluxo e a criação de objetos não é mais o próprio objeto, mas algo externo a ele.
+- **DI (Injeção de Dependência)** é um padrão específico de IoC: a dependência é fornecida externamente — por construtor, método ou propriedade.
+- **Container de DI** é uma ferramenta: automatiza a composição quando o grafo de dependências cresce a ponto de gerenciar manualmente se tornar custoso.
+
+Esta é a definição que usamos aqui, a mesma estabelecida por Martin Fowler no artigo [*Inversion of Control Containers and the Dependency Injection pattern*](https://martinfowler.com/articles/injection.html) (2004) — que cunhou o termo e classifica constructor injection, setter injection e interface injection como formas legítimas de DI, sem exigir container. O container é opcional; o padrão, não.
+
 Antes de qualquer abstração ou framework, isso se resume a passar a dependência pelo construtor:
 
 ```python
