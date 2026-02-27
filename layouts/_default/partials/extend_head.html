@@ -1,3 +1,11 @@
 {{ if eq hugo.Environment "production" }}
 <script defer src="https://cloud.umami.is/script.js" data-website-id="5f70bdf7-b1af-4497-8780-a0c7684591b1"></script>
 {{ end }}
+
+{{ if .Page.Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  mermaid.initialize({ startOnLoad: true, theme: isDark ? 'dark' : 'default' });
+</script>
+{{ end }}
