@@ -2,6 +2,7 @@
 date = '2026-02-27T08:14:37-03:00'
 draft = false
 title = 'Construindo Bots para o Fediverso com Python e apkit'
+tags = ["python", "activitypub", "fediverso", "bots", "mastodon", "http-signatures", "asyncio"]
 +++
 > Como implementar um bot ActivityPub funcional — do WebFinger ao HTTP Signature — e os bugs reais que você vai encontrar pelo caminho.
 
