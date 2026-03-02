@@ -21,6 +21,7 @@ baseado em Londrina-PR. Apaixonado por programação open source, crio soluçõe
 Trabalho remotamente, com foco em aprendizado contínuo e entrega de software de alta qualidade. Entre meus projetos no
 GitHub [@Riverfount](https://github.com/Riverfount), destaco:
 
+- **translate-bot**: Bot ActivityPub para o Fediverso que detecta o idioma de menções e responde com a tradução via Google Translate API. [github](https://github.com/Riverfount/translate-bot)
 - **vm-exchange**: Uma API leve para cotações de câmbio, construída com FastAPI. [github](https://github.com/Riverfount/vm-exchange)
 - **PesquisaTeses**: Ferramenta para busca automatizada de teses acadêmicas. [github](https://github.com/Riverfount/PesquisaTeses)
 - **vm_cpf_validator**: Validador eficiente de CPF em Python. [github](https://github.com/Riverfount/vm_cpf_validator)
