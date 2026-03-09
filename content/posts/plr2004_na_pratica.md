@@ -1,9 +1,13 @@
-+++
-date = '2025-12-29'
-draft = false
-title = 'PLR2004 na prática: por que evitar números mágicos em expressões booleanas em Python'
-tags = ["python", "clean-code", "ferramentas"]
-+++
+---
+date: '2025-12-29'
+draft: false
+title: 'PLR2004 na prática: por que evitar números mágicos em expressões booleanas em Python'
+tags: ["python", "clean-code", "ferramentas"]
+cover:
+  image: "images/covers/cover-plr2004-numeros-magicos.png"
+  alt: "PLR2004 na prática: por que evitar números mágicos em expressões booleanas em Python"
+  relative: false
+---
 Evitar números mágicos em expressões booleanas é uma recomendação explícita de linters Python modernos (como Pylint e Ruff, via regra PLR2004), pois esses valores dificultam a leitura e a manutenção do código.  Entender essa regra e o contexto em que ela surgiu ajuda a justificar a prática ao time e a padronizar o estilo da base de código.
 
 ## PLR2004: de onde vem essa regra?

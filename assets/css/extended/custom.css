@@ -86,3 +86,43 @@
         height: 160px;
     }
 }
+
+/* Reduz o espaço vazio abaixo do perfil na home */
+.profile {
+  min-height: unset !important;
+  padding: 20px 0 0 0;
+}
+
+/* Limita a altura da capa na listagem da home */
+.post-entry .entry-cover img {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* Limita altura da capa na home e na listagem de posts */
+.post-entry .entry-cover,
+.post-entry .entry-cover img {
+  max-height: 220px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Corrige o primeiro post destacado na listagem */
+.first-entry .entry-cover,
+.first-entry .entry-cover img {
+  max-height: 280px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Esconde o título do card quando a capa já tem o título embutido */
+.post-entry .entry-cover + .entry-header {
+  display: none;
+}
+
+.post-entry .entry-cover img,
+.first-entry .entry-cover img {
+  object-fit: cover;
+  object-position: center bottom;
+}

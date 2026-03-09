@@ -1,9 +1,13 @@
-+++
-date = '2025-11-25'
-draft = false
-title = 'Por que abandonar números mágicos em status codes HTTP'
-tags = ["api", "clean-code", "boas-práticas"]
-+++
+---
+date: '2025-11-25'
+draft: false
+title: 'Por que abandonar números mágicos em status codes HTTP'
+tags: ["api", "clean-code", "boas-práticas"]
+cover:
+  image: "images/covers/cover-numeros-magicos-http.png"
+  alt: "Por que abandonar números mágicos em status codes HTTP"
+  relative: false
+---
 Em desenvolvimento de APIs REST, status codes HTTP são tão importantes quanto o payload da resposta. Eles comunicam, de forma padronizada, o resultado de cada requisição e são consumidos por clientes, gateways, observabilidade e ferramentas de monitoração. Apesar disso, ainda é comum encontrar código repleto de “números mágicos”, como `200`, `404` ou `500` espalhados pela base.
 
 Uma abordagem mais robusta é substituir esses valores literais por constantes descritivas, como `HTTP_200_OK` ou `HTTP_404_NOT_FOUND`. Essa prática aproxima o código das boas práticas de engenharia de software e melhora diretamente a legibilidade, a manutenção e a confiabilidade da API.

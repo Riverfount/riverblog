@@ -1,9 +1,13 @@
-+++
-date = '2026-03-02'
-draft = false
-title = 'Profiling em Python: Encontrando Gargalos com cProfile e memory_profiler'
-tags = ["python", "performance", "profiling", "cProfile", "memory-profiler", "otimização"]
-+++
+---
+date: '2026-03-02'
+draft: false
+title: 'Profiling em Python: Encontrando Gargalos com cProfile e memory_profiler'
+tags: ["python", "performance", "profiling", "cProfile", "memory-profiler", "otimização"]
+cover:
+  image: "images/covers/cover-profiling-python.png"
+  alt: "Profiling em Python: Encontrando Gargalos com cProfile e memory_profiler"
+  relative: false
+---
 Existe um padrão que se repete em quase todo projeto Python que cresce. O código funciona, os testes passam, a feature está pronta — aí alguém percebe que uma rota específica demora três segundos quando deveria demorar duzentos milissegundos. Ou que um processo que roda em batch está consumindo 4 GB de RAM sem nenhuma razão óbvia.
 
 O instinto natural é abrir o código e começar a suspeitar. Aquele loop ali, essa chamada de banco, aquela list comprehension aninhada. O problema é que intuição é um método caro: você otimiza o que acha que é lento, gasta horas em algo que mal contribui para o tempo total, e o gargalo real continua intacto.

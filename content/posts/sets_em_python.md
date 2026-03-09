@@ -4,6 +4,10 @@ date: 2026-03-09
 draft: false
 description: "Explorar sets além do básico — frozenset, operações de conjunto, uso em deduplicação e otimização de buscas em coleções grandes."
 tags: ["python", "datastructures", "performance", "algorithms", "dsa", "optimization", "collections", "hashing", "bigo", "softwareengineering"]
+cover:
+  image: "images/covers/cover-sets-python.png"
+  alt: "Sets em Python: Desvendando O(1) com Operações de Conjunto"
+  relative: false
 ---
 
 Se você já usou um `set` em Python apenas para remover duplicatas com um `.add()` aqui e ali, está deixando na mesa uma das estruturas de dados mais poderosas e mal compreendidas da linguagem. Sets não são apenas listas sem duplicatas — são implementações de conjuntos matemáticos otimizadas para operações de associate arrays com tempo constante O(1), suportando operações que vão de interseção até diferença simétrica com performance que impressiona.

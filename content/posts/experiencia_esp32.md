@@ -1,10 +1,13 @@
-
-+++
-date = 2026-03-08
-draft = false
-title = "O Hello World do Hardware: Piscando um LED com ESP32"
-tags = ["ESP32", "Hardware", "Embarcados", "PlatformIO", "C++", "Relato de Experiência"]
-+++
+---
+date: 2026-03-08
+draft: false
+title: "O Hello World do Hardware: Piscando um LED com ESP32"
+tags: ["ESP32", "Hardware", "Embarcados", "PlatformIO", "C++", "Relato de Experiência"]
+cover:
+  image: "images/covers/cover-hello-hardware-esp32.png"
+  alt: "O Hello World do Hardware: Piscando um LED com ESP32"
+  relative: false
+---
 O blog tem bastante conteúdo sobre software — princípios, boas práticas, Python, APIs. Mas há um lado da computação que sempre esteve no horizonte: o hardware embarcado. Este é o primeiro relato de experiência nessa direção, e começa pelo início: o famoso *Blink* — o Hello World do hardware.
 
 A ideia é simples. Pegar uma ESP32, um resistor, um LED, montar o circuito numa protoboard e gravar um programa que faça o LED piscar. O que parece ser coisa de uma tarde revelou algumas surpresas que valem ser registradas.

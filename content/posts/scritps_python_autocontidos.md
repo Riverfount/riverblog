@@ -1,9 +1,13 @@
-+++
-date = '2025-11-28'
-draft = false
-title = 'Scripts Python Autocontidos: Como Rodar Qualquer `.py` com Dependências Embutidas no UV'
-tags = ["python", "ferramentas", "uv"]
-+++
+---
+date: '2025-11-28'
+draft: false
+title: 'Scripts Python Autocontidos: Como Rodar Qualquer `.py` com Dependências Embutidas no UV'
+tags: ["python", "ferramentas", "uv"]
+cover:
+  image: "images/covers/cover-scripts-autocontidos.png"
+  alt: "Scripts Python Autocontidos: Como Rodar Qualquer `.py` com Dependências Embutidas no UV"
+  relative: false
+---
 Você já precisou compartilhar um script Python com colegas e teve que explicar: “Instala o Python 3.12, cria um venv, instala requests e rich, depois roda”? Com o gerenciador UV, isso acabou.
 
 Agora é possível escrever um único arquivo `.py` que já traz suas dependências dentro dele, como `requests<3` e `rich`, e rodar tudo com apenas `uv run script.py`. Neste guia, você vai aprender como usar o bloco `# /// script` do UV para transformar scripts comuns em artefatos autocontidos, reprodutíveis e portáteis — perfeitos para automações, ferramentas internas e protótipos.

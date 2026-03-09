@@ -1,9 +1,13 @@
-+++
-date = '2025-11-24'
-draft = false
-title = 'Usando Abstract Base Classes (ABC) em Projetos Reais de Python: Um Exemplo Prático com Microserviços'
-tags = ["design-patterns", "tipagem", "arquitetura"]
-+++
+---
+date: '2025-11-24'
+draft: false
+title: 'Usando Abstract Base Classes (ABC) em Projetos Reais de Python: Um Exemplo Prático com Microserviços'
+tags: ["design-patterns", "tipagem", "arquitetura"]
+cover:
+  image: "images/covers/cover-usando-abc.png"
+  alt: "Usando Abstract Base Classes (ABC) em Projetos Reais de Python: Um Exemplo Prático com Microserviços"
+  relative: false
+---
 Este artigo mostra como aplicar Abstract Base Classes (ABC) em um projeto real robusto, focado no desenvolvimento de microserviços. O objetivo é garantir clareza, contratos explícitos e extensibilidade, aliando os conceitos a práticas modernas.
 
 ## Contexto do Projeto

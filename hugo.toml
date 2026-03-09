@@ -3,6 +3,7 @@ languageCode = "pt-br"
 title = "Blog do Riverfount"
 theme = "PaperMod"
 enableRobotsTXT = true
+
 [pagination]
   pagerSize = 10
 
@@ -28,6 +29,11 @@ defaultContentLanguage = "pt-br"
   name = "Buscar"
   url = "/search"
   weight = 30
+
+[[menu.main]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 40
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -84,6 +90,10 @@ defaultContentLanguage = "pt-br"
   ShowShareButtons = true
   ShowFullTextinRSS = false
 
+  showAllPagesInArchive = false
+  ShowRecentPosts = true
+  recentPostsNum = 5
+
   fuseOpts.shouldSort = true
   fuseOpts.minMatchCharLength = 2
   fuseOpts.threshold = 0.4
@@ -91,10 +101,9 @@ defaultContentLanguage = "pt-br"
   cover.linkFullImages = true
   cover.responsiveImages = true
 
-  assets.customSCSSFile = false  # garante que vai usar CSS puro
-
-  # Adicione esta linha:
-  customCSS = ["css/extended/custom.css"]
+  [params.assets]
+    disableFingerprinting = false
+    customCSS = ["css/extended/custom.css"]
 
   [[params.socialIcons]]
     name = "mastodon"

@@ -1,9 +1,13 @@
-+++
-date = '2026-01-02'
-draft = false
-title = 'Complexidade Ciclomática em Python: Guia Essencial para Engenheiros de Software'
-tags = ["python", "clean-code", "boas-práticas"]
-+++
+---
+date: '2026-01-02'
+draft: false
+title: 'Complexidade Ciclomática em Python: Guia Essencial para Engenheiros de Software'
+tags: ["python", "clean-code", "boas-práticas"]
+cover:
+  image: "images/covers/cover-complexidade-ciclomatica.png"
+  alt: "Complexidade Ciclomática em Python: Guia Essencial para Engenheiros de Software"
+  relative: false
+---
 A complexidade ciclomática mede o número de caminhos de execução independentes em uma função ou módulo Python, ajudando a identificar código difícil de testar e manter. Desenvolvida por Thomas J. McCabe em 1976, essa métrica é calculada como o número de pontos de decisão (if, for, while, etc.) mais um, revelando riscos em fluxos ramificados excessivos.
 
 ## Mas o que é Complexidade Ciclomática?

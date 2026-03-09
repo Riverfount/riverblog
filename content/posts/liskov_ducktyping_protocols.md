@@ -1,9 +1,13 @@
-+++
-date = '2025-11-11'
-draft = false
-title = 'Liskov, Duck Typing e Protocolos: Como Python Transforma o Princípio de Substituição'
-tags = ["solid", "tipagem", "design-patterns"]
-+++
+---
+date: '2025-11-11'
+draft: false
+title: 'Liskov, Duck Typing e Protocolos: Como Python Transforma o Princípio de Substituição'
+tags: ["solid", "tipagem", "design-patterns"]
+cover:
+  image: "images/covers/cover-liskov-duck-typing.png"
+  alt: "Liskov, Duck Typing e Protocolos: Como Python Transforma o Princípio de Substituição"
+  relative: false
+---
 No mundo da programação orientada a objetos, o Princípio de Substituição de Liskov (LSP) é um guia essencial para criar sistemas robustos e flexíveis. Porém, em Python, esse princípio ganha uma nuance especial graças ao **duck typing** e aos **protocolos**, que mudam completamente a forma como pensamos em substituição e hierarquia. 
 
 Neste post, vamos explorar como esses conceitos se entrelaçam, por que o LSP faz tanto sentido na linguagem pythonica e como seu entendimento ajuda a escrever códigos mais limpos, seguros e reutilizáveis — tudo isso sem depender exclusivamente de herança formal. Prepare-se para olhar para o LSP através das lentes de Python e descobrir ferramentas poderosas para o design de software elegante e eficiente.

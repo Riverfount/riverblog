@@ -1,9 +1,13 @@
-+++
-date = '2025-11-03'
-draft = false
-title = 'O que é uma API REST? Explicação Detalhada para Desenvolvedores'
-tags = ["api", "rest", "web", "boas-práticas"]
-+++
+---
+date: '2025-11-03'
+draft: false
+title: 'O que é uma API REST? Explicação Detalhada para Desenvolvedores'
+tags: ["api", "rest", "web", "boas-práticas"]
+cover:
+  image: "images/covers/cover-api-rest-part1.png"
+  alt: "O que é uma API REST? Explicação Detalhada para Desenvolvedores"
+  relative: false
+---
 ## Introdução
 
 APIs REST (Representational State Transfer) são um padrão amplamente adotado para comunicação entre sistemas distribuídos, especialmente na web. Elas definem um conjunto de princípios que permitem que aplicações se comuniquem de forma simples, eficiente e escalável usando o protocolo HTTP. Este artigo detalha os conceitos fundamentais, a arquitetura REST e traz exemplos práticos para facilitar o entendimento.

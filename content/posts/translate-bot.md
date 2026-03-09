@@ -1,9 +1,13 @@
-+++
-date = '2026-02-27T08:14:37-03:00'
-draft = false
-title = 'Construindo Bots para o Fediverso com Python e apkit'
-tags = ["python", "activitypub", "fediverso", "bots", "mastodon", "http-signatures", "asyncio"]
-+++
+---
+date: '2026-02-27T08:14:37-03:00'
+draft: false
+title: 'Construindo Bots para o Fediverso com Python e apkit'
+tags: ["python", "activitypub", "fediverso", "bots", "mastodon", "http-signatures", "asyncio"]
+cover:
+  image: "images/covers/cover-bots-fediverso.png"
+  alt: "Construindo Bots para o Fediverso com Python e apkit"
+  relative: false
+---
 > Como implementar um bot ActivityPub funcional — do WebFinger ao HTTP Signature — e os bugs reais que você vai encontrar pelo caminho.
 
 O Fediverso cresce a cada ano, e com ele cresce o interesse de engenheiros em criar aplicações que se integram nativamente ao ecossistema descentralizado. O ActivityPub, padrão W3C desde 2018, é o protocolo que cola tudo isso: Mastodon, Pleroma, Pixelfed e dezenas de outras plataformas falam a mesma língua. A boa notícia para quem escreve Python é que existe uma biblioteca que encapsula a complexidade do protocolo e deixa você focar no que o bot realmente faz.

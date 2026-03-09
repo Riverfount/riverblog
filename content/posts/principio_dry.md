@@ -1,9 +1,13 @@
-+++
-date = '2025-11-07'
-draft = false
-title = 'DRY: o princípio que separa código amador de código profissional'
-tags = ["solid", "clean-code", "boas-práticas"]
-+++
+---
+date: '2025-11-07'
+draft: false
+title: 'DRY: o princípio que separa código amador de código profissional'
+tags: ["solid", "clean-code", "boas-práticas"]
+cover:
+  image: "images/covers/cover-principio-dry.png"
+  alt: "DRY: o princípio que separa código amador de código profissional"
+  relative: false
+---
 Na prática de desenvolvimento, é comum ver blocos de código duplicados, copiados e colados em diferentes partes de um sistema. Parece inofensivo; afinal, “funciona”. Mas com o tempo, essa abordagem se torna um problema sério. É aqui que entra o princípio DRY — Don't Repeat Yourself — um dos fundamentos mais importantes da engenharia de software moderna.
 
 ## O que é o princípio DRY

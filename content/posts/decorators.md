@@ -1,9 +1,13 @@
-+++
-date = '2026-02-19T11:29:23-03:00'
-draft = false
-title = 'Decorators Internamente: Como Funcionam e Como Criar os Seus'
-tags = ["python", "decoradores", "design-patterns"]
-+++
+---
+date: '2026-02-19T11:29:23-03:00'
+draft: false
+title: 'Decorators Internamente: Como Funcionam e Como Criar os Seus'
+tags: ["python", "decoradores", "design-patterns"]
+cover:
+  image: "images/covers/cover-decorators-python.png"
+  alt: "Decorators Internamente: Como Funcionam e Como Criar os Seus"
+  relative: false
+---
 Se você escreve Python há algum tempo, já usou decorators sem perceber. O `@app.route` do Flask, o
 `@pytest.mark.parametrize`, o `@dataclass` da stdlib, o `@property` nativo da linguagem — todos são decorators. Eles
 aparecem em todo framework relevante do ecossistema, mas a maioria dos recursos disponíveis explica *como usar* sem

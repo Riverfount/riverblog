@@ -1,9 +1,13 @@
-+++
-date = '2025-11-18'
-draft = false
-title = '`from módulo import *` em Python: por que você nunca deveria usar essa prática'
-tags = ["python", "boas-práticas", "clean-code"]
-+++
+---
+date: '2025-11-18'
+draft: false
+title: '`from módulo import *` em Python: por que você nunca deveria usar essa prática'
+tags: ["python", "boas-práticas", "clean-code"]
+cover:
+  image: "images/covers/cover-from-import-wildcard.png"
+  alt: "`from módulo import *` em Python: por que você nunca deveria usar essa prática"
+  relative: false
+---
 Entenda os riscos do uso de `from módulo import *` em Python, saiba por que ele compromete a legibilidade e a manutenção do código e descubra as alternativas recomendadas por desenvolvedores experientes.
 
 ## A armadilha da conveniência em Python  

@@ -4,6 +4,10 @@ date: 2026-03-05
 draft: false
 tags: ["python", "segurança", "criptografia", "arquitetura"]
 summary: "MD5, SHA-256 e bcrypt ainda aparecem em bases de código novas. O que está errado nessa escolha, como o Argon2 resolve o problema e por que o pepper é a camada extra que separa uma implementação boa de uma implementação sólida."
+cover:
+  image: "images/covers/cover-argon2-python.png"
+  alt: "Argon2 em Python: o jeito certo de guardar senhas"
+  relative: false
 ---
 
 Este artigo foi inspirado pelo vídeo

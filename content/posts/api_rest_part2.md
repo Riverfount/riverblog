@@ -1,9 +1,13 @@
-+++
-date = '2025-11-04'
-draft = false
-title = 'O que é uma API REST? Segunda parte ...'
-tags = ["api", "rest", "web", "http"]
-+++
+---
+date: '2025-11-04'
+draft: false
+title: 'O que é uma API REST? Segunda parte ...'
+tags: ["api", "rest", "web", "http"]
+cover:
+  image: "images/covers/cover-api-rest-part2.png"
+  alt: "O que é uma API REST? Segunda parte ..."
+  relative: false
+---
 Dando continuidade ao artigo **"O que é uma API REST? Explicação Detalhada para Desenvolvedores"**, esta segunda parte aprofunda-se em um método HTTP essencial que não foi coberto anteriormente: o **PATCH**, destacando seu papel na atualização parcial de recursos. Enquanto no artigo inicial exploramos os métodos GET, POST, PUT e DELETE para operações completas de criação, leitura, atualização e exclusão, aqui explicamos como o PATCH permite modificações mais precisas e eficientes, sem a necessidade de substituir o recurso inteiro.
 
 Além disso, como as APIs REST são uma forte implementação do protocolo HTTP, entender os **códigos de status** retornados pelo servidor é fundamental para um desenvolvimento eficaz e para os consumidores da API interpretarem corretamente o resultado das requisições. Nesta parte, exploraremos os códigos mais comuns e seu significado prático para o ciclo de vida das requisições REST.

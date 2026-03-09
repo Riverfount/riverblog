@@ -1,9 +1,13 @@
-+++
-date = '2025-11-06'
-draft = false
-title = 'Como usar Type Hints em Callables no Python para aumentar a qualidade do seu código'
-tags = ["python", "tipagem", "boas-práticas"]
-+++
+---
+date: '2025-11-06'
+draft: false
+title: 'Como usar Type Hints em Callables no Python para aumentar a qualidade do seu código'
+tags: ["python", "tipagem", "boas-práticas"]
+cover:
+  image: "images/covers/cover-type-hints-callables.png"
+  alt: "Como usar Type Hints em Callables no Python para aumentar a qualidade do seu código"
+  relative: false
+---
 Os Type Hints transformaram a forma como escrevemos e mantemos código Python. Desde que foram introduzidos oficialmente no Python 3.5+, eles se tornaram essenciais em projetos que buscam clareza, segurança e manutenção mais fácil.
 
 Mesmo sendo uma linguagem dinamicamente tipada, o Python se beneficia muito dessas anotações estáticas, especialmente em callables — funções, métodos e classes. Neste artigo, vamos entender por que usar Type Hints é uma prática que vale o investimento.
