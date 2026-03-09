@@ -2,7 +2,6 @@
 title: "Sets em Python: Desvendando O(1) com Operações de Conjunto"
 date: 2026-03-09
 draft: false
-description: "Explorar sets além do básico — frozenset, operações de conjunto, uso em deduplicação e otimização de buscas em coleções grandes."
 tags: ["python", "datastructures", "performance", "algorithms", "dsa", "optimization", "collections", "hashing", "bigo", "softwareengineering"]
 cover:
   image: "images/covers/cover-sets-python.png"

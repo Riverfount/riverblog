@@ -126,3 +126,8 @@
   object-fit: cover;
   object-position: center bottom;
 }
+
+/* Esconde o título no post quando a capa já tem o título embutido */
+.post-header h1 {
+  display: none;
+}
