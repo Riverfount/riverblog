@@ -218,21 +218,28 @@ asyncio.run(main())
 ### asyncio.create_task
 
 ```python
-import asyncio
-
 async def main():
     # create_task agenda imediatamente e retorna um objeto Task
     tarefa_a = asyncio.create_task(tarefa("A", 1.0))
     tarefa_b = asyncio.create_task(tarefa("B", 0.5))
 
-    # Podemos inspecionar, cancelar, ou aguardar individualmente
-    resultado_b = await tarefa_b
-    resultado_a = await tarefa_a
-    
-    print(f"B terminou: {resultado_b}")
+    # As duas tasks já estão rodando concorrentemente desde o create_task.
+    # Para aguardar ambas sem perder a concorrência, use gather sobre as tasks:
+    resultado_a, resultado_b = await asyncio.gather(tarefa_a, tarefa_b)
+
     print(f"A terminou: {resultado_a}")
+    print(f"B terminou: {resultado_b}")
 
 asyncio.run(main())
+```
+> Atenção: fazer `await tarefa_a` seguido de `await tarefa_b` em sequência não cancela a concorrência entre as tasks — elas continuam rodando em paralelo no event loop — mas força o código a esperar A terminar antes de processar o resultado de B. Se B terminar primeiro, o resultado fica parado esperando. 
+
+Para processar os resultados à medida que chegam, use asyncio.as_completed:
+
+```python
+for coro in asyncio.as_completed([tarefa_a, tarefa_b]):
+    resultado = await coro
+    print(f"concluída: {resultado}")
 ```
 
 `create_task` é mais flexível: permite cancelar tarefas individualmente, verificar se completaram, ou aguardar com timeout. Em geral, use `gather` quando você tem um conjunto fixo de corrotinas e quer todos os resultados; use `create_task` quando precisa de controle granular sobre cada tarefa.
