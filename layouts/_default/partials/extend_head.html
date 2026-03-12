@@ -1,5 +1,15 @@
 {{ if eq hugo.Environment "production" }}
 <script defer src="https://cloud.umami.is/script.js" data-website-id="5f70bdf7-b1af-4497-8780-a0c7684591b1"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/rhelmer/umami-kit@latest/umami-kit.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const kit = new UmamiKit({
+      scrollDepthThresholds: [25, 50, 75, 90],
+      heartbeatInterval: 30000,
+      autoTrackAllClicks: true,
+    });
+  });
+</script>
 {{ end }}
 
 {{ if .Page.Store.Get "hasMermaid" }}
