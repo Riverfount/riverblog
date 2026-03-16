@@ -3,7 +3,6 @@ title: "Testes que Realmente Testam: pytest Além do Básico"
 date: 2026-03-16
 draft: false
 tags: ["python", "pytest", "testes", "mocks", "fixtures", "unittest", "qualidade", "intermediário"]
-mastodon_toot_id: "116238752465329516"
 cover:
   image: "images/covers/cover-pytest-alem-do-basico.png"
   alt: "Testes que Realmente Testam: pytest Além do Básico"
