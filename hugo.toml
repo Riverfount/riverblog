@@ -101,6 +101,9 @@ defaultContentLanguage = "pt-br"
   cover.linkFullImages = true
   cover.responsiveImages = true
 
+  mastodonHost = "bolha.us"
+  mastodonUser = "riverfount"
+
   [params.assets]
     disableFingerprinting = false
     customCSS = ["css/extended/custom.css"]

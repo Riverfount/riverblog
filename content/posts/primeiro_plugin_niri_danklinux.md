@@ -4,6 +4,7 @@ date: 2026-03-13
 draft: false
 author: "Riverfount"
 tags: ["linux", "niri", "wayland", "quickshell", "qml", "danklinux"]
+mastodon_toot_id: "116224872750613436"
 cover:
   image: "images/covers/cover-primeiro-plugin-niri-danklinux.png"
   alt: "Primeiro Plugin Niri: Uma Experiência com DankLinux"

@@ -4,6 +4,7 @@ date: 2026-03-11
 author: Riverfount
 draft: false
 tags: [esp32, mqtt, iot, embarcados, c, mosquitto]
+mastodon_toot_id: "116241007513275199"
 cover:
   image: "images/covers/cover-esp32-mqtt-celular.png"
   alt: "Controlando Hardware pelo Celular: Uma Experiência com ESP32 e MQTT"

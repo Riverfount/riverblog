@@ -3,6 +3,7 @@ title: "asyncio na prática: quando concorrência resolve e quando atrapalha"
 date: 2026-03-10
 draft: false
 tags: ["python", "asyncio", "concorrência", "performance", "intermediário"]
+moastodo_toot_id: "116206634877241099"
 cover:
   image: "images/covers/cover-asyncio-pratica.png"
   alt: "asyncio na prática: quando concorrência resolve e quando atrapalha"

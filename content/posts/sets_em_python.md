@@ -3,6 +3,7 @@ title: "Sets em Python: Desvendando O(1) com Operações de Conjunto"
 date: 2026-03-09
 draft: false
 tags: ["python", "datastructures", "performance", "algorithms", "dsa", "optimization", "collections", "hashing", "bigo", "softwareengineering"]
+mastodon_toot_id: "116199049219398903"
 cover:
   image: "images/covers/cover-sets-python.png"
   alt: "Sets em Python: Desvendando O(1) com Operações de Conjunto"

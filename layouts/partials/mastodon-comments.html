@@ -1,0 +1,200 @@
+{{- $mastodonHost := .Site.Params.mastodonHost | default "bolha.us" -}}
+{{- $tootId := .Params.mastodon_toot_id -}}
+
+{{- if $tootId }}
+<section class="masto-comments" id="mastodon-comments"
+  data-host="{{ $mastodonHost }}"
+  data-toot-id="{{ $tootId }}">
+
+  <h2 class="masto-comments__title">Comentários via Mastodon</h2>
+
+  <p class="masto-comments__cta">
+    Responda ao
+    <a class="masto-comments__link"
+       href="https://{{ $mastodonHost }}/@{{ .Site.Params.mastodonUser }}/{{ $tootId }}"
+       target="_blank" rel="noopener noreferrer">
+      toot original
+    </a>
+    para deixar um comentário. Os comentários aparecem aqui após alguns instantes.
+  </p>
+
+  <div class="masto-comments__stats" id="masto-stats" aria-live="polite"></div>
+
+  <div class="masto-comments__list" id="masto-comment-list" aria-live="polite">
+    <p class="masto-comments__loading" id="masto-loading">Carregando comentários…</p>
+  </div>
+
+</section>
+
+<style>
+.masto-comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color, var(--tertiary));
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.masto-comments__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.masto-comments__cta {
+  color: var(--secondary);
+  margin: 0 0 1.25rem;
+}
+
+.masto-comments__link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  opacity: 1;
+}
+
+.masto-comments__link:hover {
+  opacity: 0.8;
+}
+
+.masto-comments__stats {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.masto-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.masto-stat__icon {
+  opacity: 0.7;
+}
+
+.masto-comments__loading {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.masto-comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.masto-comment {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  gap: 0.75rem 1rem;
+  padding: 1rem;
+  background: var(--code-bg, var(--tertiary));
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color, var(--tertiary));
+}
+
+.masto-comment__avatar-wrap {
+  grid-row: span 2;
+}
+
+.masto-comment__avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.masto-comment__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.masto-comment__author {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.masto-comment__author:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.masto-comment__handle {
+  font-size: 0.8125rem;
+  color: var(--secondary);
+}
+
+.masto-comment__date {
+  font-size: 0.8125rem;
+  color: var(--secondary);
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.masto-comment__date:hover {
+  opacity: 0.8;
+}
+
+.masto-comment__body {
+  grid-column: 2;
+  color: var(--primary);
+  overflow-wrap: break-word;
+}
+
+.masto-comment__body p {
+  margin: 0 0 0.5em;
+}
+
+.masto-comment__body p:last-child {
+  margin-bottom: 0;
+}
+
+.masto-comment__body a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.masto-comment__body a:hover {
+  opacity: 0.8;
+}
+
+.masto-comment__reactions {
+  grid-column: 2;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  color: var(--secondary);
+  margin-top: 0.25rem;
+}
+
+.masto-comment__empty {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .masto-comment {
+    grid-template-columns: 2.25rem 1fr;
+  }
+
+  .masto-comment__avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+</style>
+
+<script src="{{ "js/mastodon-comments.js" | relURL }}" defer></script>
+{{- end }}
