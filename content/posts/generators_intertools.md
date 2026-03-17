@@ -63,15 +63,15 @@ Três listas em memória ao mesmo tempo: o arquivo inteiro, as linhas filtradas,
 
 ## O que está acontecendo
 
-`readlines()` lê o arquivo inteiro e retorna uma lista com todas as linhas. A list comprehension em `filtrar_erros` cria outra lista completa. `extrair_tipos` cria uma terceira. Em nenhum momento o Python pode liberar a memória de uma etapa enquanto a próxima está sendo construída.
+O objeto file retornado pelo `open()` já é um iterável lazy — um `for linha in f` leria uma linha por vez, sem carregar o arquivo inteiro na memória.
+
+O `readlines()` desfaz esse comportamento: força a leitura completa do arquivo e devolve tudo numa lista antes de qualquer processamento começar.
+
+O mesmo vale para as etapas seguintes. A list comprehension em `filtrar_erros` cria outra lista completa. `extrair_tipos` cria uma terceira. Em nenhum momento o Python pode liberar a memória de uma etapa enquanto a próxima está sendo construída.
 
 O problema tem um nome: **eager evaluation**. Cada função processa tudo de uma vez e entrega o resultado completo para a próxima. É o padrão natural de quem pensa em funções que transformam coleções.
 
 A alternativa é **lazy evaluation**: processar um elemento por vez, só quando necessário. É exatamente o que generators fazem.
-
-## Generators: processamento sob demanda
-
-Um generator é uma função que usa `yield` em vez de `return`. Em vez de calcular todos os valores de uma vez e guardar em memória, ela calcula um valor, entrega, pausa, e só retorna quando o próximo valor for solicitado.
 
 ```python
 def gerar_numeros():
@@ -158,6 +158,8 @@ def carregar_linhas(caminho):
 ```
 
 `yield from` delega a iteração para qualquer iterável — outro generator, uma lista, um arquivo aberto. É mais conciso e também mais eficiente: elimina o overhead de um `for` explícito na função geradora.
+
+> Vale notar que o `for linha in f` dentro do `with open()` já é lazy por si só — o objeto file lê uma linha por vez. O generator é necessário aqui porque `carregar_linhas` precisa retornar um iterável para o chamador sem fechar o arquivo antes da iteração acontecer. Se a iteração fosse feita diretamente dentro do `with`, o `for linha in f` seria suficiente.
 
 Também é útil para compor generators:
 
