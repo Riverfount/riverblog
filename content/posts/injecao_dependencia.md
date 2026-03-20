@@ -426,15 +426,15 @@ Quem entende o mecanismo manual usa essas bibliotecas com clareza. Quem pula dir
 
 ## 9. Checklist de Boas Práticas
 
-| # | Prática | Por quê |
-|---|---|---|
-| 1 | Injete dependências pelo construtor quando são essenciais | Torna obrigatórias as dependências que o objeto não pode funcionar sem |
-| 2 | Use `Protocol` para definir contratos, não `ABC` | Conformidade estrutural: nenhuma herança forçada nas implementações |
-| 3 | Crie implementações falsas simples nos testes | Mais controle e clareza do que `MagicMock` para dependências com contrato definido |
-| 4 | Concentre a composição em um único ponto | Facilita entender o grafo de dependências e trocar implementações |
-| 5 | Mantenha a camada de serviço sem imports de infraestrutura | Se `import sqlite3` aparece no serviço, algo está errado |
-| 6 | Não injete mais do que o necessário | Uma classe que recebe 5 dependências provavelmente tem responsabilidades demais |
-| 7 | Documente os contratos com docstrings nos Protocols | O Protocol é a interface pública — merece a mesma atenção que o código |
+| # | Prática                                                    | Por quê                                                                            |
+|---|------------------------------------------------------------|------------------------------------------------------------------------------------|
+| 1 | Injete dependências pelo construtor quando são essenciais  | Torna obrigatórias as dependências que o objeto não pode funcionar sem             |
+| 2 | Use `Protocol` para definir contratos, não `ABC`           | Conformidade estrutural: nenhuma herança forçada nas implementações                |
+| 3 | Crie implementações falsas simples nos testes              | Mais controle e clareza do que `MagicMock` para dependências com contrato definido |
+| 4 | Concentre a composição em um único ponto                   | Facilita entender o grafo de dependências e trocar implementações                  |
+| 5 | Mantenha a camada de serviço sem imports de infraestrutura | Se `import sqlite3` aparece no serviço, algo está errado                           |
+| 6 | Não injete mais do que o necessário                        | Uma classe que recebe 5 dependências provavelmente tem responsabilidades demais    |
+| 7 | Documente os contratos com docstrings nos Protocols        | O Protocol é a interface pública — merece a mesma atenção que o código             |
 
 ---
 
