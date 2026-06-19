@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="Cada tentativa de envio ao serviço A consome de um tópico; em caso de falha, a mensagem é republicada no próximo tópico de retry com atraso e a partição é liberada; após a terceira falha vai para o tópico de fallback que envia ao serviço B.">
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.ttl{font-size:14.5px;font-weight:600;} .sub{font-size:12px;} .lbl{font-size:12px;}
+.t-our{fill:#0f6e56;} .t-neu{fill:#2c2c2a;} .t-lbl{fill:#5f5e5a;}
+.b-our{fill:#dcefe7;stroke:#5dcaa5;} .b-neu{fill:#eef0f2;stroke:#c4c8cc;}
+rect{stroke-width:1;}
+.ok{stroke:#7fae3a;stroke-width:1.5;fill:none;} .aho{fill:#7fae3a;}
+.bad{stroke:#d06a44;stroke-width:1.5;fill:none;} .ahb{fill:#d06a44;}
+.edge{stroke:#9098a0;stroke-width:1.5;fill:none;} .ah{fill:#9098a0;}
+.t-ok{fill:#3b6d11;} .t-bad{fill:#993c1d;}
+@media(prefers-color-scheme:dark){
+.t-our{fill:#9fe1cb;} .t-neu{fill:#d3d1c7;} .t-lbl{fill:#b4b2a9;}
+.b-our{fill:#0f3b30;stroke:#1d9e75;} .b-neu{fill:#33332f;stroke:#5f5e5a;}
+.ok{stroke:#7fae3a;} .bad{stroke:#cf6a43;} .edge{stroke:#888781;} .ah{fill:#888781;}
+.t-ok{fill:#c0dd97;} .t-bad{fill:#f0997b;}
+}
+</style>
+<marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="ah"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="aho"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="ahb"/></marker>
+</defs>
+
+<rect class="b-our" x="60" y="40" width="300" height="54" rx="8"/>
+<text class="ttl t-our" x="76" y="62" text-anchor="start">tópico: propostas</text>
+<text class="sub t-our" x="76" y="79" text-anchor="start">consumidor tenta enviar ao A (1ª)</text>
+<rect class="b-our" x="60" y="156" width="300" height="54" rx="8"/>
+<text class="ttl t-our" x="76" y="178" text-anchor="start">tópico: retry-30s</text>
+<text class="sub t-our" x="76" y="195" text-anchor="start">consumidor tenta enviar ao A (2ª)</text>
+<rect class="b-our" x="60" y="272" width="300" height="54" rx="8"/>
+<text class="ttl t-our" x="76" y="294" text-anchor="start">tópico: retry-2m</text>
+<text class="sub t-our" x="76" y="311" text-anchor="start">consumidor tenta enviar ao A (3ª)</text>
+<rect class="b-our" x="60" y="388" width="300" height="54" rx="8"/>
+<text class="ttl t-our" x="76" y="410" text-anchor="start">tópico: fallback</text>
+<text class="sub t-our" x="76" y="427" text-anchor="start">consumidor envia ao B</text>
+
+<path class="bad" d="M150,94 L150,154" marker-end="url(#ahb)"/>
+<text class="lbl t-bad" x="160" y="128" text-anchor="start">falha</text>
+<path class="bad" d="M150,210 L150,270" marker-end="url(#ahb)"/>
+<text class="lbl t-bad" x="160" y="244" text-anchor="start">falha</text>
+<path class="bad" d="M150,326 L150,386" marker-end="url(#ahb)"/>
+<text class="lbl t-bad" x="160" y="360" text-anchor="start">3ª falha</text>
+
+<rect class="b-neu" x="470" y="47" width="210" height="40" rx="8"/>
+<text class="sub t-neu" x="575" y="72" text-anchor="middle">AGUARDANDO_WEBHOOK_A</text>
+<rect class="b-neu" x="470" y="163" width="210" height="40" rx="8"/>
+<text class="sub t-neu" x="575" y="188" text-anchor="middle">AGUARDANDO_WEBHOOK_A</text>
+<rect class="b-neu" x="470" y="279" width="210" height="40" rx="8"/>
+<text class="sub t-neu" x="575" y="304" text-anchor="middle">AGUARDANDO_WEBHOOK_A</text>
+<rect class="b-neu" x="470" y="395" width="210" height="40" rx="8"/>
+<text class="sub t-neu" x="575" y="420" text-anchor="middle">POLLING_B</text>
+
+<path class="ok" d="M362,67 L466,67" marker-end="url(#aho)"/>
+<text class="lbl t-ok" x="395" y="60" text-anchor="middle">sucesso</text>
+<path class="ok" d="M362,183 L466,183" marker-end="url(#aho)"/>
+<path class="ok" d="M362,299 L466,299" marker-end="url(#aho)"/>
+<path class="edge" d="M362,415 L466,415" marker-end="url(#ah)"/>
+</svg>

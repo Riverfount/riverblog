@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 452" width="720" height="452" role="img" aria-label="Cliente envia a proposta; o receptor responde 202; o Kafka durável é consumido pelo cluster de consumers, que despacha para o serviço A (webhook) ou, após 3 falhas, para o serviço B (polling).">
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.ttl{font-size:14.5px;font-weight:600;} .sub{font-size:12px;} .lbl{font-size:12px;}
+.t-neu{fill:#2c2c2a;} .t-our{fill:#0f6e56;} .t-ext{fill:#993c1d;} .t-lbl{fill:#5f5e5a;}
+.b-neu{fill:#eef0f2;stroke:#c4c8cc;} .b-our{fill:#dcefe7;stroke:#5dcaa5;} .b-ext{fill:#f7e2d9;stroke:#d85a30;}
+rect{stroke-width:1;}
+.edge{stroke:#9098a0;stroke-width:1.5;fill:none;} .ah{fill:#9098a0;}
+@media(prefers-color-scheme:dark){
+.t-neu{fill:#d3d1c7;} .t-our{fill:#9fe1cb;} .t-ext{fill:#f0997b;} .t-lbl{fill:#b4b2a9;}
+.b-neu{fill:#33332f;stroke:#5f5e5a;} .b-our{fill:#0f3b30;stroke:#1d9e75;} .b-ext{fill:#4a2516;stroke:#b14a26;}
+.edge{stroke:#888781;} .ah{fill:#888781;}
+}
+</style>
+<marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="ah"/></marker>
+</defs>
+
+<rect class="b-neu" x="250" y="24" width="220" height="46" rx="8"/>
+<text class="ttl t-neu" x="360" y="44" text-anchor="middle">Cliente</text>
+<text class="sub t-neu" x="360" y="61" text-anchor="middle">POST /propostas</text>
+<path class="edge" d="M360,70 L360,100" marker-end="url(#ah)"/>
+
+<rect class="b-our" x="250" y="102" width="220" height="52" rx="8"/>
+<text class="ttl t-our" x="360" y="124" text-anchor="middle">Receptor</text>
+<text class="sub t-our" x="360" y="140" text-anchor="middle">responde 202 + id (não espera)</text>
+<path class="edge" d="M360,154 L360,184" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="372" y="173" text-anchor="start">publica</text>
+
+<rect class="b-neu" x="250" y="186" width="220" height="52" rx="8"/>
+<text class="ttl t-neu" x="360" y="208" text-anchor="middle">Kafka — tópico: propostas</text>
+<text class="sub t-neu" x="360" y="224" text-anchor="middle">durável: sobrevive a crash/deploy</text>
+<path class="edge" d="M360,238 L360,268" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="372" y="257" text-anchor="start">consome</text>
+
+<rect class="b-our" x="250" y="270" width="220" height="52" rx="8"/>
+<text class="ttl t-our" x="360" y="292" text-anchor="middle">Cluster de Consumers</text>
+<text class="sub t-our" x="360" y="308" text-anchor="middle">despacha e faz retry</text>
+
+<path class="edge" d="M310,322 L310,346 L190,346 L190,372" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="120" y="340" text-anchor="start">envio OK (até 3x)</text>
+<path class="edge" d="M410,322 L410,346 L530,346 L530,372" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="470" y="340" text-anchor="start">após 3 falhas</text>
+
+<rect class="b-ext" x="70" y="374" width="240" height="52" rx="8"/>
+<text class="ttl t-ext" x="190" y="396" text-anchor="middle">Serviço A</text>
+<text class="sub t-ext" x="190" y="412" text-anchor="middle">principal · webhook</text>
+<rect class="b-ext" x="410" y="374" width="240" height="52" rx="8"/>
+<text class="ttl t-ext" x="530" y="396" text-anchor="middle">Serviço B</text>
+<text class="sub t-ext" x="530" y="412" text-anchor="middle">fallback · polling</text>
+
+<text class="lbl t-lbl" x="190" y="444" text-anchor="middle">resultado por webhook</text>
+<text class="lbl t-lbl" x="530" y="444" text-anchor="middle">resultado por polling</text>
+</svg>

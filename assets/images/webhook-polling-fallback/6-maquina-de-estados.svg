@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 382" width="720" height="382" role="img" aria-label="Máquina de estados: de recebida para enviando ao A com até 3 tentativas; em sucesso vai para aguardando webhook (webhook leva a aprovada ou rejeitada; silêncio leva a revisão manual); em 3 falhas vai para polling do B (resposta leva a aprovada ou rejeitada; SLA estourado leva a revisão manual).">
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.ttl{font-size:14.5px;font-weight:600;} .sub{font-size:12px;} .lbl{font-size:11.5px;}
+.t-our{fill:#0f6e56;} .t-neu{fill:#2c2c2a;} .t-term{fill:#3b6d11;} .t-warn{fill:#854f0b;} .t-lbl{fill:#5f5e5a;}
+.b-our{fill:#dcefe7;stroke:#5dcaa5;} .b-neu{fill:#eef0f2;stroke:#c4c8cc;} .b-term{fill:#e9f3de;stroke:#97c459;} .b-warn{fill:#faeeda;stroke:#ef9f27;}
+rect{stroke-width:1;}
+.edge{stroke:#9098a0;stroke-width:1.5;fill:none;} .ah{fill:#9098a0;}
+@media(prefers-color-scheme:dark){
+.t-our{fill:#9fe1cb;} .t-neu{fill:#d3d1c7;} .t-term{fill:#c0dd97;} .t-warn{fill:#fac775;} .t-lbl{fill:#b4b2a9;}
+.b-our{fill:#0f3b30;stroke:#1d9e75;} .b-neu{fill:#33332f;stroke:#5f5e5a;} .b-term{fill:#1f3a10;stroke:#639922;} .b-warn{fill:#3d2a08;stroke:#ba7517;}
+.edge{stroke:#888781;} .ah{fill:#888781;}
+}
+</style>
+<marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="ah"/></marker>
+</defs>
+
+<rect class="b-neu" x="290" y="28" width="140" height="44" rx="8"/>
+<text class="ttl t-neu" x="360" y="56" text-anchor="middle">RECEBIDA</text>
+<path class="edge" d="M360,72 L360,104" marker-end="url(#ah)"/>
+
+<rect class="b-our" x="250" y="106" width="220" height="52" rx="8"/>
+<text class="ttl t-our" x="360" y="128" text-anchor="middle">ENVIANDO_A</text>
+<text class="sub t-our" x="360" y="144" text-anchor="middle">até 3 tentativas (retry topics)</text>
+
+<path class="edge" d="M360,158 L360,182 L165,182 L165,212" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="172" y="176" text-anchor="start">envio OK</text>
+<path class="edge" d="M360,182 L555,182 L555,212" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="500" y="176" text-anchor="start">3 falhas</text>
+
+<rect class="b-our" x="40" y="214" width="250" height="48" rx="8"/>
+<text class="sub t-our" x="165" y="243" text-anchor="middle">AGUARDANDO_WEBHOOK_A</text>
+<rect class="b-our" x="430" y="214" width="250" height="48" rx="8"/>
+<text class="sub t-our" x="555" y="243" text-anchor="middle">POLLING_B</text>
+
+<rect class="b-term" x="30" y="320" width="160" height="46" rx="8"/>
+<text class="sub t-term" x="110" y="348" text-anchor="middle">APROVADA / REJEITADA</text>
+<rect class="b-warn" x="200" y="320" width="135" height="46" rx="8"/>
+<text class="sub t-warn" x="267" y="348" text-anchor="middle">REVISÃO_MANUAL</text>
+<rect class="b-term" x="420" y="320" width="160" height="46" rx="8"/>
+<text class="sub t-term" x="500" y="348" text-anchor="middle">APROVADA / REJEITADA</text>
+<rect class="b-warn" x="590" y="320" width="120" height="46" rx="8"/>
+<text class="sub t-warn" x="650" y="348" text-anchor="middle">REVISÃO_MANUAL</text>
+
+<path class="edge" d="M120,262 L110,318" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="58" y="294" text-anchor="start">webhook</text>
+<path class="edge" d="M210,262 L265,318" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="214" y="290" text-anchor="start">silêncio</text>
+<path class="edge" d="M510,262 L500,318" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="452" y="294" text-anchor="start">resposta</text>
+<path class="edge" d="M600,262 L650,318" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="606" y="290" text-anchor="start">SLA</text>
+</svg>

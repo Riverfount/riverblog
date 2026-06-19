@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 305" width="720" height="305" role="img" aria-label="O serviço A empurra o resultado por webhook; o serviço B precisa ser consultado por polling.">
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.ttl{font-size:14.5px;font-weight:600;} .sub{font-size:12px;} .lbl{font-size:12px;}
+.t-neu{fill:#2c2c2a;} .t-ext{fill:#993c1d;} .t-lbl{fill:#5f5e5a;}
+.b-neu{fill:#eef0f2;stroke:#c4c8cc;} .b-ext{fill:#f7e2d9;stroke:#d85a30;}
+rect{stroke-width:1;}
+.edge{stroke:#9098a0;stroke-width:1.5;fill:none;} .ah{fill:#9098a0;}
+@media(prefers-color-scheme:dark){
+.t-neu{fill:#d3d1c7;} .t-ext{fill:#f0997b;} .t-lbl{fill:#b4b2a9;}
+.b-neu{fill:#33332f;stroke:#5f5e5a;} .b-ext{fill:#4a2516;stroke:#b14a26;}
+.edge{stroke:#888781;} .ah{fill:#888781;}
+}
+</style>
+<marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="ah"/></marker>
+</defs>
+
+<rect class="b-neu" x="40" y="52" width="120" height="52" rx="8"/>
+<text class="ttl t-neu" x="100" y="83" text-anchor="middle">Você</text>
+<rect class="b-ext" x="470" y="52" width="220" height="52" rx="8"/>
+<text class="ttl t-ext" x="580" y="74" text-anchor="middle">Serviço A</text>
+<text class="sub t-ext" x="580" y="92" text-anchor="middle">principal</text>
+<path class="edge" d="M165,78 L463,78" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="314" y="70" text-anchor="middle">envia a proposta</text>
+<path class="edge" d="M580,106 L580,132 L100,132 L100,106" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="340" y="151" text-anchor="middle">resultado por webhook — o serviço A inicia o contato</text>
+
+<rect class="b-neu" x="40" y="196" width="120" height="52" rx="8"/>
+<text class="ttl t-neu" x="100" y="227" text-anchor="middle">Você</text>
+<rect class="b-ext" x="470" y="196" width="220" height="52" rx="8"/>
+<text class="ttl t-ext" x="580" y="218" text-anchor="middle">Serviço B</text>
+<text class="sub t-ext" x="580" y="236" text-anchor="middle">fallback</text>
+<path class="edge" d="M165,222 L463,222" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="314" y="214" text-anchor="middle">envia a proposta</text>
+<path class="edge" d="M100,250 L100,276 L580,276 L580,250" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="340" y="295" text-anchor="middle">polling — você consulta repetidamente; você inicia o contato</text>
+</svg>

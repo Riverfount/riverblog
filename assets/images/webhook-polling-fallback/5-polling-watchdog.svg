@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="720" height="320" role="img" aria-label="O processo agendado consulta o serviço B nas propostas em polling e, como watchdog, varre as propostas presas aguardando o webhook além do SLA; ambos os caminhos podem terminar em revisão manual.">
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.ttl{font-size:14.5px;font-weight:600;} .sub{font-size:12px;} .lbl{font-size:12px;}
+.t-our{fill:#0f6e56;} .t-neu{fill:#2c2c2a;} .t-term{fill:#3b6d11;} .t-warn{fill:#854f0b;} .t-lbl{fill:#5f5e5a;}
+.b-our{fill:#dcefe7;stroke:#5dcaa5;} .b-neu{fill:#eef0f2;stroke:#c4c8cc;} .b-term{fill:#e9f3de;stroke:#97c459;} .b-warn{fill:#faeeda;stroke:#ef9f27;}
+rect{stroke-width:1;}
+.edge{stroke:#9098a0;stroke-width:1.5;fill:none;} .ah{fill:#9098a0;}
+@media(prefers-color-scheme:dark){
+.t-our{fill:#9fe1cb;} .t-neu{fill:#d3d1c7;} .t-term{fill:#c0dd97;} .t-warn{fill:#fac775;} .t-lbl{fill:#b4b2a9;}
+.b-our{fill:#0f3b30;stroke:#1d9e75;} .b-neu{fill:#33332f;stroke:#5f5e5a;} .b-term{fill:#1f3a10;stroke:#639922;} .b-warn{fill:#3d2a08;stroke:#ba7517;}
+.edge{stroke:#888781;} .ah{fill:#888781;}
+}
+</style>
+<marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="ah"/></marker>
+</defs>
+
+<rect class="b-our" x="270" y="28" width="180" height="52" rx="8"/>
+<text class="ttl t-our" x="360" y="50" text-anchor="middle">processo agendado</text>
+<text class="sub t-our" x="360" y="66" text-anchor="middle">roda a cada 30s</text>
+
+<path class="edge" d="M360,82 L360,104 L165,104 L165,138" marker-end="url(#ah)"/>
+<path class="edge" d="M360,104 L530,104 L530,138" marker-end="url(#ah)"/>
+
+<rect class="b-neu" x="40" y="140" width="250" height="48" rx="8"/>
+<text class="sub t-neu" x="165" y="169" text-anchor="middle">propostas em POLLING_B</text>
+<rect class="b-neu" x="380" y="140" width="300" height="48" rx="8"/>
+<text class="sub t-neu" x="530" y="169" text-anchor="middle">AGUARDANDO_WEBHOOK_A além do SLA</text>
+<text class="lbl t-lbl" x="530" y="130" text-anchor="middle">o watchdog</text>
+
+<rect class="b-term" x="30" y="250" width="180" height="46" rx="8"/>
+<text class="sub t-term" x="120" y="278" text-anchor="middle">APROVADA / REJEITADA</text>
+<rect class="b-warn" x="222" y="250" width="150" height="46" rx="8"/>
+<text class="sub t-warn" x="297" y="278" text-anchor="middle">REVISÃO_MANUAL</text>
+<rect class="b-warn" x="470" y="250" width="170" height="46" rx="8"/>
+<text class="sub t-warn" x="555" y="278" text-anchor="middle">REVISÃO_MANUAL</text>
+
+<path class="edge" d="M120,188 L120,248" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="128" y="222" text-anchor="start">respondeu</text>
+<path class="edge" d="M230,188 L297,224 L297,248" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="238" y="208" text-anchor="start">estourou SLA</text>
+<path class="edge" d="M530,188 L545,248" marker-end="url(#ah)"/>
+<text class="lbl t-lbl" x="540" y="222" text-anchor="start">webhook nunca chegou</text>
+</svg>
