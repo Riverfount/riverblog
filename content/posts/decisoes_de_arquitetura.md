@@ -1,7 +1,7 @@
 ---
 title: "Decisões de arquitetura para uma integração com webhook, retry e fallback"
 date: 2026-06-18
-draft: true
+draft: false
 tags: ["arquitetura", "kafka", "resiliência", "sistemas distribuídos", "avançado"]
 cover:
   image: "images/covers/cover-webhook-polling-fallback.png"
