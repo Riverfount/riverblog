@@ -1,5 +1,5 @@
 baseURL = "https://riverfount.dev.br"
-languageCode = "pt-br"
+locale = "pt-br"
 title = "Blog do Riverfount"
 theme = "PaperMod"
 enableRobotsTXT = true
@@ -11,8 +11,8 @@ defaultContentLanguage = "pt-br"
 
 [languages]
   [languages."pt-br"]
-    languageCode = "pt-BR"
-    languageName = "Português"
+    locale = "pt-BR"
+    label = "Português"
     weight = 1
 
 [[menu.main]]
