@@ -38,7 +38,7 @@ Nenhuma dessas linhas importa pro que o teste verifica. `company`, `address`, `s
 
 Nenhuma das duas é boa. A primeira é ruído puro: quem lê o teste precisa escanear quinze linhas de setup pra achar a única que interessa, `status="pending"`. A segunda esconde a informação no lugar errado: quando um teste falha porque um campo obrigatório mudou de nome, a pilha de erro aponta pra dentro de uma fixture que mora em outro arquivo, distante da linha em que a asserção está.
 
-`mongo_bakery` (ferramenta que ajudo a manter, ao lado do Roger Camargo) nasceu tentando fechar exatamente essa lacuna pra quem usa MongoEngine. A inspiração declarada é o `model_bakery` do mundo Django: preencher automaticamente tudo que for obrigatório e deixar o teste explícito só sobre o que aquele caso específico realmente testa.
+`mongo_bakery` (ferramenta que ajudo a manter, ao lado do Roger Camargo - _In Memoriam_) nasceu tentando fechar exatamente essa lacuna pra quem usa MongoEngine. A inspiração declarada é o `model_bakery` do mundo Django: preencher automaticamente tudo que for obrigatório e deixar o teste explícito só sobre o que aquele caso específico realmente testa.
 
 ## Instalação
 
