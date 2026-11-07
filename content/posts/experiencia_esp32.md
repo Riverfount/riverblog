@@ -121,7 +121,11 @@ O próximo passo é explorar sensores, comunicação serial e o WiFi embutido da
 
 ### Resultado final
 
-![Circuito montado](/images/resultado_final.gif)
+<video autoplay loop muted playsinline controls width="796" style="max-width:100%;height:auto">
+  <source src="/images/resultado_final.webm" type="video/webm">
+  <source src="/images/resultado_final.mp4" type="video/mp4">
+  Seu navegador não suporta vídeo. Circuito montado com o LED piscando.
+</video>
 
 ## P.S. — A Migração para C com ESP-IDF
 
