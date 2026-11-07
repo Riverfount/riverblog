@@ -1,20 +1,41 @@
 {{ if eq hugo.Environment "production" }}
-<script defer src="https://cloud.umami.is/script.js" data-website-id="5f70bdf7-b1af-4497-8780-a0c7684591b1"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/rhelmer/umami-kit@latest/umami-kit.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const kit = new UmamiKit({
-      scrollDepthThresholds: [25, 50, 75, 90],
-      heartbeatInterval: 30000,
-      autoTrackAllClicks: true,
+  (function () {
+    // Skip known spam/bot traffic: fake referrer or headless-browser fingerprint.
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var fakeReferrer = /aocr\.org/i.test(document.referrer);
+    var botFingerprint = tz === 'Asia/Shanghai' && screen.width === 800 && screen.height === 600;
+    if (fakeReferrer || botFingerprint) return;
+
+    // Dynamically injected scripts are async, so load them in order:
+    // umami-kit needs window.umami to exist before it is initialized.
+    function load(src, attrs, onload) {
+      var s = document.createElement('script');
+      s.src = src;
+      for (var k in attrs) s.setAttribute(k, attrs[k]);
+      if (onload) s.onload = onload;
+      document.head.appendChild(s);
+    }
+
+    load('https://cloud.umami.is/script.js',
+         { 'data-website-id': '5f70bdf7-b1af-4497-8780-a0c7684591b1' },
+         function () {
+      // Pinned to a commit SHA (the repo has no tags/releases).
+      load('https://cdn.jsdelivr.net/gh/rhelmer/umami-kit@e0005afc54bdf0606a8e2738f2cdce31c7d797a7/umami-kit.js', {}, function () {
+        new UmamiKit({
+          scrollDepthThresholds: [25, 50, 75, 90],
+          heartbeatInterval: 30000,
+          autoTrackAllClicks: true,
+        });
+      });
     });
-  });
+  })();
 </script>
 {{ end }}
 
 {{ if .Page.Store.Get "hasMermaid" }}
 <script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12.3.0/dist/mermaid.esm.min.mjs';
   const isDark = document.documentElement.dataset.theme === 'dark';
   mermaid.initialize({ startOnLoad: true, theme: isDark ? 'dark' : 'default' });
 </script>
